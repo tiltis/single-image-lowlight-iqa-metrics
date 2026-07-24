@@ -1,0 +1,7 @@
+*.asv
+*.xlsx
+*.exe
+.svn/
+__pycache__/
+Thumbs.db
+Desktop.ini
