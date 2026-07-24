@@ -1,0 +1,19 @@
+단일영상 저조도 개선 정량적 평가 지표 - Requirement
+
+[MATLAB]
+- MATLAB R2018b 이상 권장
+- Image Processing Toolbox 필수 (niqe, piqe, brisque 내장 함수 사용)
+- Deep Learning Toolbox: NIMA(run/nima_batch.m) 실행 시 필요
+- run/ 폴더의 .m 스크립트는 파일 상단의 input_folder, output_file 경로를
+  본인 환경에 맞게 수정한 뒤 실행
+
+[Python] (최신 지표: run/modern_metrics.py)
+- Python 3.9 이상
+- pip install pyiqa  (PyTorch 자동 설치됨)
+- GPU(CUDA) 있으면 자동 사용, 없으면 CPU로 동작
+- 실행 예:
+  python run/modern_metrics.py <이미지_폴더> --metrics niqe brisque piqe musiq maniqa clipiqa
+
+[official/ 폴더의 원저자 코드]
+- 사전학습 가중치는 용량 문제로 미포함. 각 폴더의 README 안내에 따라 다운로드
+- 라이선스는 각 폴더의 LICENSE 파일을 따름
